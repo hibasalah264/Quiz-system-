@@ -59,7 +59,7 @@ if (!isset($_SESSION['admin_id'])) {
         </div>
         <div class="menu">
             <a href="quiz.php">Manage Quizzes</a>
-            <a href="answer.php">Manage answer</a>
+<!--             <a href="answer.php">Manage answer</a> -->
 
             <a href="admin.php">Manage Admin</a>
             <a href="student.php">Manage Students</a>
