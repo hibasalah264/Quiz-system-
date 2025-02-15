@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_score'])) {
     
     // Validate score
     if ($score >= 0 && $score <= $max_score) {
-        $update_query = "UPDATE result SET score = $score 
+        $update_query = "UPDATE result SET result = $score 
                         WHERE student_id = $student_id AND quiz_id = $quiz_id";
         if (mysqli_query($conn, $update_query)) {
             $success_msg = "Score updated successfully!";
