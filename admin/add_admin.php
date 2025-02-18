@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $firstName = mysqli_real_escape_string($conn, $_POST['first-name']);
     $lastName = mysqli_real_escape_string($conn, $_POST['last-name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
     
-    $sql = "INSERT INTO admin (admin_first_name, admin_last_name, admin_email, admin_password)
+    $sql = "INSERT INTO `admin` (`admin_first_name`, `admin_last_name`, `admin_email`, `admin_password`)
             VALUES ('$firstName', '$lastName', '$email', '$password')";
     mysqli_query($conn, $sql);
 }
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="form-container">
         <h2>Add Admin</h2>
-        <form method="POST" action="">
+        <form method="POST" action="add_admin.php">
             <div class="form-group">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" 
