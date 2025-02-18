@@ -78,7 +78,7 @@ if (isset($_POST['login'])) {
     <p>Don't have an account? <a href="signup.php">Sign up here</a></p>
 
         <!-- <h2>Login</h2>
-        <input type="email" name="email" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button name="login" type="submit">Login</button> -->
     </form>
