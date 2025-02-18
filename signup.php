@@ -20,7 +20,7 @@ if (isset($_POST['signup'])) {
     if (mysqli_query($conn, $sql)) {
         // echo "Sign Up Success";
      //    header("Location: index.php");
-     echo "<script> window.location ='index.php';</script>"; 
+     echo "<script> windows.location ='index.php';</script>"; 
 
 
 }else{
